@@ -1,13 +1,14 @@
 import React from 'react';
 
 type squareProps={
+    value:string,
     onClick:()=>void
 }
 
-const SquareButton = ({onClick}:squareProps) => {
+const SquareButton = ({onClick,value}:squareProps) => {
   return (
     <button type="button" onClick={onClick}>
-        X
+        {value}
     </button>
   )
 }
