@@ -1,14 +1,20 @@
 import React from "react";
 import SquareButton from "./SquareButton";
 
-interface boardProps{
-    value:string[],
-    onClick:(index:number)=>void
+interface boardProps {
+  value: string[];
+  onClick: (index: number) => void;
 }
 
-const Board = ({onClick,value}:boardProps) => {
+const Board = ({ onClick, value }: boardProps) => {
   return (
-    <div>
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "100px 100px 100px",
+        justifyContent: "center",
+      }}
+    >
       <div>
         <SquareButton onClick={() => onClick(0)} value={value[0]} />
         <SquareButton onClick={() => onClick(1)} value={value[1]} />
