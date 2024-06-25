@@ -7,7 +7,7 @@ type squareProps={
 
 const SquareButton = ({onClick,value}:squareProps) => {
   return (
-    <button type="button" onClick={onClick}>
+    <button type="button" onClick={onClick} style={{width:'100px',height:'100px'}}>
         {value}
     </button>
   )
